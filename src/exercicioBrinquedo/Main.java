@@ -18,6 +18,14 @@ public class Main {
                 return false;
             }
         });
+
+        //LAMBDA EXPRESSION
+        validaEntradaAnonima((brinquedo, idade, altura) -> {
+            if (brinquedo.equals("montanha russa") && idade > 16 && altura > 1.55) return true;
+            if (brinquedo.equals("carrossel") && idade > 6 && altura > 1.30) return true;
+            if (brinquedo.equals("roda gigante")) return true;
+            return false;
+        });
     }
     static void validaEntradaAnonima(Brinquedo crianca) {
         System.out.println(crianca.validaEntrada("montanha russa", 15, 1.70f));
